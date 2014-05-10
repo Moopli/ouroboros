@@ -1,0 +1,3 @@
+/home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/build/code/CMakeFiles/assimp.dir
+/home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/build/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir
+/home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/build/CMakeFiles/uninstall.dir

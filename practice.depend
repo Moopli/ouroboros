@@ -1,0 +1,602 @@
+# depslib dependency file v1.0
+1391293642 source:/home/filip/DEV/ouroboros/sdl-tuts/practice/main.cpp
+	<cstdlib>
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	<string>
+	<iostream>
+	<vector>
+	"doodle.hh"
+	"include/Verlet.h"
+	"include/VerletEdge.h"
+	"include/Mesh.h"
+	"include/VerletBuilder.h"
+	"LuaExpose.h"
+	"ModelImport.h"
+
+1327665706 /usr/include/SDL/SDL.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_config.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1327665706 /usr/include/SDL/SDL_platform.h
+
+1327665706 /usr/include/SDL/begin_code.h
+
+1327665706 /usr/include/SDL/close_code.h
+
+1327665706 /usr/include/SDL/SDL_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_endian.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_keysym.h
+
+1327665706 /usr/include/SDL/SDL_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1327665706 /usr/include/SDL/SDL_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1327665706 /usr/include/SDL/SDL_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1390617655 source:/home/filip/DEV/ouroboros/sdl-tuts/practice/doodle.cc
+	<iostream>
+	"SDL/SDL.h"
+	<cmath>
+
+1390607503 /home/filip/DEV/ouroboros/sdl-tuts/practice/doodle.hh
+
+1390643896 /home/filip/DEV/ouroboros/sdl-tuts/practice/include/Verlet.h
+	"SDL/SDL.h"
+
+1390964134 /home/filip/DEV/ouroboros/sdl-tuts/practice/include/VerletEdge.h
+	"Verlet.h"
+
+1390650215 source:/home/filip/DEV/ouroboros/sdl-tuts/practice/Verlet.cpp
+	"include/Verlet.h"
+	<ctime>
+	"SDL/SDL.h"
+	<cmath>
+
+1390964051 source:/home/filip/DEV/ouroboros/sdl-tuts/practice/VerletEdge.cpp
+	"include/VerletEdge.h"
+	"include/Verlet.h"
+	<cmath>
+
+1390659798 source:/home/filip/DEV/ouroboros/sdl-tuts/practice/VerletBuilders.cc
+	"include/Verlet.h"
+	"include/VerletEdge.h"
+	"include/Mesh.h"
+	<cstdio>
+	<cassert>
+
+1390619985 /home/filip/DEV/ouroboros/sdl-tuts/practice/include/Mesh.h
+	<vector>
+	"Verlet.h"
+	"VerletEdge.h"
+
+1390658913 source:/home/filip/DEV/ouroboros/sdl-tuts/practice/Mesh.cpp
+	"include/Mesh.h"
+	<cstdlib>
+	<cstdio>
+
+1390652015 /home/filip/DEV/ouroboros/sdl-tuts/practice/lualib/luainclude.h
+	"src/lua.h"
+	"src/lauxlib.h"
+	"src/lualib.h"
+
+1384171756 /home/filip/DEV/ouroboros/sdl-tuts/practice/lualib/src/lua.h
+	<stdarg.h>
+	<stddef.h>
+	"luaconf.h"
+
+1365792527 /home/filip/DEV/ouroboros/sdl-tuts/practice/lualib/src/luaconf.h
+	<limits.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+
+1365792527 /home/filip/DEV/ouroboros/sdl-tuts/practice/lualib/src/lauxlib.h
+	<stddef.h>
+	<stdio.h>
+	"lua.h"
+
+1365792527 /home/filip/DEV/ouroboros/sdl-tuts/practice/lualib/src/lualib.h
+	"lua.h"
+
+1390658204 /home/filip/DEV/ouroboros/sdl-tuts/practice/include/VerletBuilder.h
+
+1335158562 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/Importer.hpp
+	"types.h"
+	"config.h"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/types.h
+	<sys/types.h>
+	<memory.h>
+	<math.h>
+	<stddef.h>
+	"defs.h"
+	"vector3.h"
+	"vector2.h"
+	"color4.h"
+	"matrix3x3.h"
+	"matrix4x4.h"
+	"quaternion.h"
+	<new>
+	<string>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+	"vector2.inl"
+	"vector3.inl"
+	"color4.inl"
+	"quaternion.inl"
+	"matrix3x3.inl"
+	"matrix4x4.inl"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/defs.h
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/vector3.h
+	<math.h>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1231635488 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/Compiler/pushpack1.h
+
+1231635488 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/Compiler/poppack1.h
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/vector2.h
+	<math.h>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1329587640 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/color4.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/matrix3x3.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/matrix4x4.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/quaternion.h
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/vector2.inl
+	"vector2.h"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/vector3.inl
+	"vector3.h"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/color4.inl
+	"color4.h"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/quaternion.inl
+	"quaternion.h"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/matrix3x3.inl
+	"matrix3x3.h"
+	"matrix4x4.h"
+	<algorithm>
+	<limits>
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/matrix4x4.inl
+	"matrix4x4.h"
+	"matrix3x3.h"
+	"quaternion.h"
+	<algorithm>
+	<limits>
+	<math.h>
+
+1338768094 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/config.h
+
+1390677052 source:/home/filip/DEV/ouroboros/sdl-tuts/practice/ModelImport.cc
+	"assimplib/include/assimp/Importer.hpp"
+	"assimplib/include/assimp/scene.h"
+	"assimplib/include/assimp/postprocess.h"
+	<string>
+	<cstdio>
+	<cmath>
+	<string>
+	<iostream>
+	<fstream>
+	<vector>
+	<sstream>
+	"ModelImport.h"
+	"include/Mesh.h"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/scene.h
+	"types.h"
+	"texture.h"
+	"mesh.h"
+	"light.h"
+	"camera.h"
+	"material.h"
+	"anim.h"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/texture.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/mesh.h
+	"types.h"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/light.h
+	"types.h"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/camera.h
+	"types.h"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/material.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+	"material.inl"
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/material.inl
+
+1328313848 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/anim.h
+	"types.h"
+	"quaternion.h"
+
+1335157346 /home/filip/DEV/ouroboros/sdl-tuts/practice/assimplib/include/assimp/postprocess.h
+	"types.h"
+
+1390654759 source:/home/filip/DEV/ouroboros/sdl-tuts/practice/LuaExpose.cc
+	"lualib/luainclude.h"
+	"LuaExpose.h"
+	<cstdio>
+
+1390654786 /home/filip/DEV/ouroboros/sdl-tuts/practice/LuaExpose.h
+	"lualib/luainclude.h"
+
+1390674069 /home/filip/DEV/ouroboros/sdl-tuts/practice/ModelImport.h
+	<string>
+	<iostream>
+	<fstream>
+	<vector>
+	<sstream>
+	"include/Mesh.h"
+
+1390658913 source:/home/filip/DEV/ouroboros/practice/Mesh.cpp
+	"include/Mesh.h"
+	<cstdlib>
+	<cstdio>
+
+1390619985 /home/filip/DEV/ouroboros/practice/include/Mesh.h
+	<vector>
+	"Verlet.h"
+	"VerletEdge.h"
+
+1390643896 /home/filip/DEV/ouroboros/practice/include/Verlet.h
+	"SDL/SDL.h"
+
+1390964134 /home/filip/DEV/ouroboros/practice/include/VerletEdge.h
+	"Verlet.h"
+
+1390677052 source:/home/filip/DEV/ouroboros/practice/ModelImport.cc
+	"assimplib/include/assimp/Importer.hpp"
+	"assimplib/include/assimp/scene.h"
+	"assimplib/include/assimp/postprocess.h"
+	<string>
+	<cstdio>
+	<cmath>
+	<string>
+	<iostream>
+	<fstream>
+	<vector>
+	<sstream>
+	"ModelImport.h"
+	"include/Mesh.h"
+
+1335158562 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/Importer.hpp
+	"types.h"
+	"config.h"
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/types.h
+	<sys/types.h>
+	<memory.h>
+	<math.h>
+	<stddef.h>
+	"defs.h"
+	"vector3.h"
+	"vector2.h"
+	"color4.h"
+	"matrix3x3.h"
+	"matrix4x4.h"
+	"quaternion.h"
+	<new>
+	<string>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+	"vector2.inl"
+	"vector3.inl"
+	"color4.inl"
+	"quaternion.inl"
+	"matrix3x3.inl"
+	"matrix4x4.inl"
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/defs.h
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/vector3.h
+	<math.h>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1231635488 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/Compiler/pushpack1.h
+
+1231635488 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/Compiler/poppack1.h
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/vector2.h
+	<math.h>
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1329587640 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/color4.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/matrix3x3.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/matrix4x4.h
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/quaternion.h
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/vector2.inl
+	"vector2.h"
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/vector3.inl
+	"vector3.h"
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/color4.inl
+	"color4.h"
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/quaternion.inl
+	"quaternion.h"
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/matrix3x3.inl
+	"matrix3x3.h"
+	"matrix4x4.h"
+	<algorithm>
+	<limits>
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/matrix4x4.inl
+	"matrix4x4.h"
+	"matrix3x3.h"
+	"quaternion.h"
+	<algorithm>
+	<limits>
+	<math.h>
+
+1338768094 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/config.h
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/scene.h
+	"types.h"
+	"texture.h"
+	"mesh.h"
+	"light.h"
+	"camera.h"
+	"material.h"
+	"anim.h"
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/texture.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/mesh.h
+	"types.h"
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/light.h
+	"types.h"
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/camera.h
+	"types.h"
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/material.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+	"material.inl"
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/material.inl
+
+1328313848 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/anim.h
+	"types.h"
+	"quaternion.h"
+
+1335157346 /home/filip/DEV/ouroboros/practice/assimplib/include/assimp/postprocess.h
+	"types.h"
+
+1390674069 /home/filip/DEV/ouroboros/practice/ModelImport.h
+	<string>
+	<iostream>
+	<fstream>
+	<vector>
+	<sstream>
+	"include/Mesh.h"
+
+1390650215 source:/home/filip/DEV/ouroboros/practice/Verlet.cpp
+	"include/Verlet.h"
+	<ctime>
+	"SDL/SDL.h"
+	<cmath>
+
+1390659798 source:/home/filip/DEV/ouroboros/practice/VerletBuilders.cc
+	"include/Verlet.h"
+	"include/VerletEdge.h"
+	"include/Mesh.h"
+	<cstdio>
+	<cassert>
+
+1390964051 source:/home/filip/DEV/ouroboros/practice/VerletEdge.cpp
+	"include/VerletEdge.h"
+	"include/Verlet.h"
+	<cmath>
+
+1390617655 source:/home/filip/DEV/ouroboros/practice/doodle.cc
+	<iostream>
+	"SDL/SDL.h"
+	<cmath>
+

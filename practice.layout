@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="ModelImport.cc" open="0" top="0" tabpos="4">
+		<Cursor position="228" topLine="0" />
+	</File>
+	<File name="Verlet.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="109" topLine="15" />
+	</File>
+	<File name="VerletBuilders.cc" open="1" top="0" tabpos="4">
+		<Cursor position="547" topLine="9" />
+	</File>
+	<File name="VerletEdge.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="363" topLine="0" />
+	</File>
+	<File name="doodle.cc" open="1" top="0" tabpos="2">
+		<Cursor position="277" topLine="3" />
+	</File>
+	<File name="include/Verlet.h" open="0" top="0" tabpos="3">
+		<Cursor position="231" topLine="0" />
+	</File>
+	<File name="include/VerletBuilder.h" open="1" top="0" tabpos="5">
+		<Cursor position="107" topLine="0" />
+	</File>
+	<File name="include/VerletEdge.h" open="1" top="0" tabpos="6">
+		<Cursor position="369" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="641" topLine="12" />
+	</File>
+</CodeBlocks_layout_file>
