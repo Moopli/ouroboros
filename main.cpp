@@ -1,6 +1,6 @@
 #include <cstdlib>
-#include "SDL/SDL.h"
-#include "SDL/SDL_image.h"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include <string>
 #include <iostream>
 #include <vector>
@@ -9,7 +9,7 @@
 #include "include/VerletEdge.h"
 #include "include/Mesh.h"
 #include "include/VerletBuilder.h"
-#include "LuaExpose.h"
+// #include "LuaExpose.h"
 #include "ModelImport.h"
 //#include "assimplib/include/assimp/Importer.hpp"
 
@@ -18,10 +18,11 @@
 // TODO convert for iterators into boost foreach?
 //
 
-SDL_Surface *screen;
+SDL_Window *screen;
+SDL_Renderer *renderer;
 Mesh *allPoints;
 // LUA EXPOSURE
-lua_State *LuaState;
+// lua_State *LuaState;
 /*
 int initLua()
 {
@@ -39,10 +40,10 @@ int initLua()
     printf("lua initialized properly\n");
     return 0;
 }*/
-static int latticeWrapper(lua_State *L)
-{
-    return 1;
-}
+// static int latticeWrapper(lua_State *L)
+// {
+//     return 1;
+// }
 
 //
 
@@ -60,14 +61,22 @@ int init()
     atexit(SDL_Quit);
 
     // create a new window
-    screen = SDL_SetVideoMode(1080, 720, 32,
-                                           SDL_HWSURFACE|SDL_DOUBLEBUF);
-    if ( !screen )
-    {
-        printf("Unable to set 640x480 video: %s\n", SDL_GetError());
+    screen = SDL_CreateWindow("Ooo Stretchy", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 1080, 720, SDL_WINDOW_OPENGL);
+    if ( !screen ) {
+        printf("Unable to create window: %s\n", SDL_GetError());
         return 1;
     }
-    SDL_WM_SetCaption("Ooo Stretchy", NULL);
+
+    renderer = SDL_CreateRenderer(screen, -1, 0);
+
+    if ( !renderer ) {
+        printf("Unable to create renderer: %s\n", SDL_GetError());
+    }
+
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+    SDL_RenderClear(renderer);
+    SDL_RenderPresent(renderer);
+
     //printf("goody\n");
     // set up test verlets
     allPoints = new Mesh; //mkLattice(10,10,10,10,4);// mkLattice(10, 20, 10, 10, 4); //(x,y,z,l,e)
@@ -77,12 +86,12 @@ int init()
     //allPoints->mergeInto(temp);
     //delete temp;
     //printf("%d %d\n", temp->edges.size(), temp->verlets.size());
-    temp = mkLattice(60,60,1,10,3);
+    temp = mkLattice(2,500,2,5,3);
     allPoints->mergeInto(temp);
     delete temp;
-    //temp = mkLattice(40,30,3,10,4);
-    //allPoints->mergeInto(temp);
-    //delete temp;
+    // temp = mkLattice(60,60,2,10,4);
+    // allPoints->mergeInto(temp);
+    // delete temp;
     #else
     temp = ImportObj("bunny.obj");
     printf("managed to import\n");
@@ -140,15 +149,27 @@ void runLoop()
                 }
             case SDL_MOUSEMOTION:
                 // when mouse down and moved, grabbed verlets get moved
-                // FALL THROUGH
+                {
+                    for (std::vector<Verlet*>::iterator i = allPoints->verlets.begin();
+                i != allPoints->verlets.end(); ++i)
+                        (*i)->drag(event.motion.x, event.motion.y);
+                }
+                break;
             case SDL_MOUSEBUTTONDOWN:
-                // FALL THROUGH
+                {
+                    for (std::vector<Verlet*>::iterator i = allPoints->verlets.begin();
+                i != allPoints->verlets.end(); ++i)
+                        (*i)->grab(event.button.x, event.button.y);
+                }
+                break;
             case SDL_MOUSEBUTTONUP:
                 {
                     for (std::vector<Verlet*>::iterator i = allPoints->verlets.begin();
                 i != allPoints->verlets.end(); ++i)
-                        (*i)->eatEvent(event);
+                        (*i)->release();
                 }
+                break;
+            default:;
             } // end switch
         } // end of message processing
 
@@ -160,7 +181,8 @@ void runLoop()
 
         // DRAWING STARTS HERE
         // clear screen
-        SDL_FillRect(screen, 0, SDL_MapRGB(screen->format, 0, 0, 0));
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+        SDL_RenderClear(renderer);
         int stress;
 
         //drawLine(screen, 50, 50, 100, 100, rgb2Px(255, 0, 255));
@@ -171,7 +193,8 @@ void runLoop()
             //printf("doodle");
             stress = (*i)->getStress() * 255;
             if (stress > 255) stress = 510 - stress;
-            drawLine(screen, (*i)->m_a->m_x, (*i)->m_a->m_y, (*i)->m_b->m_x, (*i)->m_b->m_y, rgb2Px(255, 255-stress, 255-stress));
+            SDL_SetRenderDrawColor(renderer, 255, 255-stress, 255-stress, SDL_ALPHA_OPAQUE);
+            SDL_RenderDrawLine(renderer, (*i)->m_a->m_x, (*i)->m_a->m_y, (*i)->m_b->m_x, (*i)->m_b->m_y);
         }
         /*
         for (std::vector<Verlet*>::iterator i = allPoints->verlets.begin();
@@ -181,10 +204,7 @@ void runLoop()
             drawLine(screen, (*i)->m_x, (*i)->m_y, (*i)->m_x+2, (*i)->m_y, rgb2Px(240, 156, 0));
         }*/
 
-        // DRAWING ENDS HERE
-
-        // finally, update the screen :)
-        SDL_Flip(screen);
+        SDL_RenderPresent(renderer);
     } // end main loop
 
 }

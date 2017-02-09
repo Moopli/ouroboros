@@ -1,9 +1,14 @@
 #include "include/Verlet.h"
 #include <ctime>
-#include "SDL/SDL.h"
-#include <cmath>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_events.h>
+// #include <cmath>
 
-#define CLICK_RANGE 20
+#define CLICK_RANGE 400
+
+inline unsigned int hypot2(int dx, int dy) {
+    return dx * dx + dy * dy;
+}
 
 Verlet::Verlet(double x, double y, double z)
 {
@@ -13,7 +18,7 @@ Verlet::Verlet(double x, double y, double z)
     m_z = m_zp = z;
     held = false;
     m_mass = 100;
-    m_xa = m_ya = 0;
+    m_xa = m_ya = m_za = 0;
 }
 
 void Verlet::move()
@@ -31,30 +36,27 @@ void Verlet::move()
     m_t = timenow;
 }
 
-void Verlet::eatEvent(SDL_Event e)
-{
-    if (held && e.type == SDL_MOUSEMOTION)
+void Verlet::grab(unsigned int x, unsigned int y)
+{   
+    if (hypot2(x - m_x, y - m_y) < CLICK_RANGE)
     {
-        m_x = e.button.x;
-        m_y = e.button.y;
-    }
-    else if (e.type == SDL_MOUSEBUTTONDOWN)
-    {
-        if (hypot(e.button.x - m_x, e.button.y - m_y) < CLICK_RANGE)
-        {
-            held = true;
-            m_x = e.button.x;
-            m_y = e.button.y;
-        }
-    }
-    else if (e.type == SDL_MOUSEBUTTONUP)
-    {
-        held = false;
+        held = true;
+        m_x = x;
+        m_y = y;
     }
 }
 
-Verlet::~Verlet()
-{
-    //dtor
+void Verlet::release() {
+    held = false;
+}
+
+void Verlet::drag(unsigned int x, unsigned int y) {
+    // printf("woo!\n");
+    if (held) {
+        m_x = x; m_y = y;
+    }
+}
+
+Verlet::~Verlet() {
 }
 

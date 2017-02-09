@@ -18,7 +18,10 @@ class Verlet
         unsigned int GetMass() { return m_mass; }
         void SetMass(unsigned int val) { m_mass = val; }
         void move();
-        void eatEvent(SDL_Event e);
+        void grab(unsigned int, unsigned int);
+        void drag(unsigned int, unsigned int);
+        void release();
+        void eatEvent(SDL_Event *e);
     protected:
     private:
         double m_xp, m_yp, m_zp;
